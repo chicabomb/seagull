@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  @include font-default();
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  max-width: $size_container;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  @extend .flex;
+  flex-direction: column;
+}
+
+.content {
+  background-color: white;
+}
+
+.horizontal-scroll {
+  @extend .flex;
+  @extend .container;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  position: relative;
+  div {
+    flex: 0 0 auto;
+  }
+  // &::after,
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   width: 50px;
+  //   height: 100%;
+  //   background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+  // }
+  // &::after {
+  //   background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+  //   right: 0;
+  // }
+}
+
+.content-header {
+  @extend .container;
+  margin: 50vh auto -20px;
+  height: 80px;
+  border-radius: $size_space*4 $size_space*4 0 0;
+  background-color: white;
+  display: flex;
+  h1 {
+    margin: $size_space*3 $size_space*4 0;
+  }
+}
+
+.responsive {
+  flex-direction: column;
+  @media screen and (min-width: map-get($breakpoints, 'laptop')) {
+    flex-direction: row;
+  }
+}

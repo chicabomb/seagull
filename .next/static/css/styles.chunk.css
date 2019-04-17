@@ -1,0 +1,289 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+h1 {
+  font-size: 28px;
+  letter-spacing: 1px; }
+
+h2 {
+  font-size: 16px;
+  letter-spacing: 1px; }
+
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table; }
+
+.mapboxgl-map {
+  border-radius: 10px; }
+
+body {
+  margin: 0;
+  font-family: "Cabin", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+  letter-spacing: 1px; }
+
+.container, .horizontal-scroll, .tags, .gallery-images, .suggestions, .content-header, .header {
+  width: 100%;
+  margin: auto;
+  max-width: 1000px; }
+
+.flex, .column, .offer-list, .suggestions div, .horizontal-scroll, .tags, .gallery-images, .suggestions, footer, .header, .header-offer, .offer-list > div {
+  display: flex;
+  justify-content: space-between; }
+
+.column, .offer-list, .suggestions div {
+  flex-direction: column; }
+
+.content {
+  background-color: white; }
+
+.horizontal-scroll, .tags, .gallery-images, .suggestions {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  position: relative; }
+  .horizontal-scroll div, .tags div, .gallery-images div, .suggestions div {
+    flex: 0 0 auto; }
+
+.content-header {
+  margin: 50vh auto -20px;
+  height: 80px;
+  border-radius: 40px 40px 0 0;
+  background-color: white;
+  display: flex; }
+  .content-header h1 {
+    margin: 30px 40px 0; }
+
+.responsive {
+  flex-direction: column; }
+  @media screen and (min-width: 1024px) {
+    .responsive {
+      flex-direction: row; } }
+
+footer p {
+  color: #B8B8B8;
+  margin: 10px auto;
+  font-size: 10px; }
+
+.header {
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%); }
+  .header img {
+    margin: 10px 20px;
+    height: 40px; }
+
+.header-offer {
+  background-color: white;
+  border-radius: 100px;
+  margin: 10px 10px auto auto;
+  padding: 0 10px 0 20px;
+  cursor: pointer;
+  z-index: 2;
+  align-items: center; }
+  .header-offer span {
+    font-size: 22px; }
+  .header-offer img {
+    margin: 5px;
+    height: 30px;
+    width: 30px; }
+
+.hero-area {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  height: 60vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end; }
+  .hero-area .container, .hero-area .horizontal-scroll, .hero-area .tags, .hero-area .gallery-images, .hero-area .suggestions, .hero-area .content-header, .hero-area .header {
+    height: 100%; }
+
+.description {
+  margin: 0 40px 0;
+  background-color: white;
+  text-align: justify;
+  border-radius: 40px 40px 0 0; }
+  .description p {
+    font-family: "Cabin", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    letter-spacing: 1px;
+    color: #B8B8B8;
+    display: flex;
+    align-items: center; }
+    .description p img {
+      margin: auto 10px;
+      width: 20px; }
+  .description h3 {
+    margin: 40px 40px 60px; }
+
+.marker {
+  height: 12px;
+  width: 12px;
+  border: 8px solid #F9BF38;
+  border-radius: 100%; }
+
+.map {
+  width: 100%; }
+  .map > div {
+    margin: auto; }
+  @media screen and (min-width: 1024px) {
+    .map {
+      width: 50%; }
+      .map > div {
+        margin-left: 0; } }
+
+.tags div {
+  padding: 20px 0;
+  background-color: #219BC6;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  font-size: 10px;
+  margin: 20px 10px 20px 0; }
+
+.gallery-images div {
+  height: 100px;
+  width: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 10px 5px; }
+
+.gallery-highlight {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+  margin-bottom: 50px; }
+  .gallery-highlight .previous,
+  .gallery-highlight .next {
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    background-color: #00000042;
+    top: 0;
+    cursor: pointer; }
+    .gallery-highlight .previous::hover,
+    .gallery-highlight .next::hover {
+      background-color: black; }
+    .gallery-highlight .previous::before,
+    .gallery-highlight .next::before {
+      content: '\221F';
+      position: absolute;
+      color: white;
+      top: 50%;
+      transform: rotate(45deg);
+      margin: 10px; }
+  .gallery-highlight .next {
+    right: 0; }
+    .gallery-highlight .next::before {
+      margin: 10px 0 10px 5px;
+      transform: rotate(-135deg); }
+
+.offer-list {
+  height: 500px;
+  max-width: 500px;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 40px auto;
+  justify-content: start; }
+  .offer-list h3 {
+    margin: 0; }
+  @media screen and (min-width: 1024px) {
+    .offer-list {
+      margin: 0 0 0 20px; } }
+  .offer-list > div {
+    flex-wrap: wrap;
+    margin: 10px 0 30px;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%; }
+
+.offer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  cursor: pointer;
+  width: 90px;
+  transition: all 0.3s ease-in-out;
+  padding: 5px; }
+  .offer:hover {
+    background-color: #f2f2f2; }
+  .offer p {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; }
+  .offer span {
+    color: #219BC6;
+    font-size: 22px; }
+  .offer img {
+    height: 30px;
+    width: 30px;
+    margin: auto 0 0; }
+  @media screen and (min-width: 1024px) {
+    .offer {
+      margin: 5px; } }
+
+.dates .offer {
+  flex-direction: column;
+  align-items: flex-end;
+  width: 135px; }
+  @media screen and (min-width: 1024px) {
+    .dates .offer {
+      margin: 5px; } }
+  .dates .offer .date {
+    color: #888;
+    font-size: 9px;
+    position: relative; }
+    .dates .offer .date + .date {
+      margin-left: 5px; }
+      .dates .offer .date + .date:before {
+        content: '\2212';
+        position: absolute;
+        left: -8px; }
+  .dates .offer span {
+    font-size: 14px;
+    margin-right: 5px; }
+  .dates .offer img {
+    height: 12px;
+    width: 12px; }
+
+.suggestions {
+  margin-bottom: 40px; }
+  .suggestions div {
+    justify-content: flex-end;
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    margin-left: 0;
+    border-radius: 10px;
+    color: white; }
+    .suggestions div h3 {
+      margin: 0 10px;
+      text-shadow: 0 0 10px black; }
+    .suggestions div p {
+      font-size: 10px;
+      color: #B8B8B8;
+      background-color: white;
+      margin: 10px 0 0;
+      padding: 10px 5px 0; }
+
+
+/*# sourceMappingURL=styles.chunk.css.map*/

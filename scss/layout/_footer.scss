@@ -1,0 +1,8 @@
+footer {
+  @extend .flex;
+  p {
+    color: $color__ashgray;
+    margin: $size_space auto;
+    font-size: $size_font_small;
+  }
+}

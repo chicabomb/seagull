@@ -1,0 +1,20 @@
+.description {
+  margin: 0 $size_space*4 0;
+  background-color: white;
+  text-align: justify;
+  border-radius: $size_space*4 $size_space*4 0 0;
+  p {
+    font-family: $font-stack;
+    letter-spacing: 1px;
+    color: $color__ashgray;
+    display: flex;
+    align-items: center;
+    img {
+      margin: auto $size_space;
+      width: $size_image-icon;
+    }
+  }
+  h3 {
+    margin: $size_space*4 $size_space*4 $size_space*6;
+  }
+}

@@ -1,0 +1,14 @@
+.tags {
+  @extend .container;
+  @extend .horizontal-scroll;
+  div {
+    padding: $size_space*2 0;
+    background-color: $color__pacific;
+    padding: $size_space $size_space*2;
+    color: white;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    font-size: $size_font_small;
+    margin: $size_space*2 $size_space $size_space*2 0;
+  }
+}

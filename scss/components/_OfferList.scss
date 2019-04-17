@@ -1,0 +1,91 @@
+.offer-list {
+  @extend .column;
+  height: 500px;
+  max-width: 500px;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: $size_space*4 auto;
+  h3 {
+    margin: 0;
+  }
+  @media screen and (min-width: map-get($breakpoints, 'laptop')) {
+    margin: 0 0 0 $size_space*2;
+  }
+  > div {
+    @extend .flex;
+    flex-wrap: wrap;
+    margin: $size_space 0 $size_space*3;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+  }
+  justify-content: start;
+}
+
+.offer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  cursor: pointer;
+  width: 90px;
+  transition: $default-transition;
+  padding: $size_space/2;
+
+  &:hover {
+    background-color: $color__background;
+  }
+
+  p {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  span {
+    color: $color__pacific;
+    font-size: $size_font_big;
+  }
+
+  img {
+    height: $size_image-icon-big;
+    width: $size_image-icon-big;
+    margin: auto 0 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'laptop')) {
+    margin: $size_space/2;
+  }
+}
+
+.dates {
+  .offer {
+    flex-direction: column;
+    align-items: flex-end;
+    width: 135px;
+    @media screen and (min-width: map-get($breakpoints, 'laptop')) {
+      margin: $size_space/2;
+    }
+    .date {
+      color: $color__taupegray;
+      font-size: 9px;
+      position: relative;
+      & + .date {
+        margin-left: $size_space/2;
+        &:before {
+          content: '\2212';
+          position: absolute;
+          left: -8px;
+        }
+      }
+    }
+    span {
+      font-size: $size_font;
+      margin-right: $size_space/2;
+    }
+    img {
+      height: $size_image-icon-small;
+      width: $size_image-icon-small;
+    }
+  }
+}

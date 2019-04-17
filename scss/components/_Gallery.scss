@@ -1,0 +1,49 @@
+
+.gallery-images {
+  @extend .horizontal-scroll;
+  div {
+    height: 100px;
+    width: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: $size_space $size_space/2;
+  }
+}
+
+.gallery-highlight {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+  margin-bottom: $size_space*5;
+  .previous,
+  .next {
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    background-color: #00000042;
+    top: 0;
+    cursor: pointer;
+    &::hover {
+      background-color: black;
+    }
+    &::before {
+      content: '\221F';
+      position: absolute;
+      color: white;
+      top: 50%;
+      transform: rotate(45deg);
+      margin: $size_space;
+    }
+  }
+  .next {
+    right: 0;
+    &::before {
+      margin: $size_space 0 $size_space $size_space/2;
+      transform: rotate(-135deg);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.marker {
+  height: 12px;
+  width: 12px;
+  border: 8px solid $color__maitai;
+  border-radius: 100%;
+}
+
+.map {
+  width: 100%;
+  > div {
+    margin: auto;
+  }
+  @media screen and (min-width: map-get($breakpoints, 'laptop')) {
+    width: 50%;
+    > div {
+      margin-left: 0;
+    }
+  }
+}

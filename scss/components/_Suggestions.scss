@@ -1,0 +1,29 @@
+
+.suggestions {
+  @extend .horizontal-scroll;
+  margin-bottom: $size_space*4;
+  div {
+    @extend .column;
+    justify-content: flex-end;
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: $size_space;
+    margin-left: 0;
+    border-radius: 10px;
+    color: white;
+    h3 {
+      margin: 0 $size_space;
+      text-shadow: 0 0 10px black;
+    }
+    p {
+      font-size: $size_font_small;
+      color: $color__ashgray;
+      background-color: white;
+      margin: $size_space 0 0;
+      padding: $size_space $size_space/2 0; 
+    }
+  }
+}
