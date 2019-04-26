@@ -1,0 +1,42 @@
+.price-per-month {
+  @extend .horizontal-scroll;
+  justify-content: end;
+  margin: $size_space*4 auto $size_space*2;
+  padding: 30px 0;
+  .price {
+    width: 40px;
+    background-color: $color__pacific;
+    margin: auto 10px 0;
+    position: relative;
+    opacity: .7;
+    transition: $default-transition;
+    cursor: pointer;
+    .period,
+    .value {
+      position: absolute;
+      bottom: -30px;
+      font-size: 8px;
+      color: $color__ashgray;
+      text-align: center;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    .value {
+      top: -15px;
+      color: $color__pirateblack;
+      font-size: 10px;
+      font-weight: 600;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.price-axis {
+  height: 1px;
+  width: 100%;
+  background-color: $color__content-border;
+  border: none;
+  margin: -40px 0 40px;
+}

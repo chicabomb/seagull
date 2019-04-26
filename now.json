@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "name": "Seagul",
   "builds": [{ "src": "next.config.js", "use": "@now/next" }],
-  "routes": [
-    { "src": "/flight/(?<id>[^/]+)", "dest": "/flight?id=$id" },
-    { "src": "/", "dest": "/flights" },
-    { "src": "/(.*)", "dest": "/" }
-  ]
+  "env": {
+    "MAPBOX_KEY": "@mapbox-key",
+    "MAPBOX_STYLE": "@mapbox-style",
+    "REQUEST_URL_CN": "@request-url-cn"
+  },
+  "name": "Seagull"
 }

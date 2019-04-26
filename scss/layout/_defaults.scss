@@ -7,6 +7,7 @@ body {
   width: 100%;
   margin: auto;
   max-width: $size_container;
+  position: relative;
 }
 
 .flex {
@@ -25,25 +26,30 @@ body {
 
 .horizontal-scroll {
   @extend .flex;
-  @extend .container;
   flex-wrap: nowrap;
   overflow-x: auto;
-  position: relative;
   div {
     flex: 0 0 auto;
   }
-  // &::after,
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   width: 50px;
-  //   height: 100%;
-  //   background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
-  // }
-  // &::after {
-  //   background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
-  //   right: 0;
-  // }
+}
+
+.scroll-area {
+  position: relative;
+  > :first-child {
+    @media screen and (min-width: map-get($breakpoints, 'tablet')) {
+      padding-left: calc(50% - 500px);
+    }
+  }
+}
+
+.fade-right {
+  position: absolute;
+  width: 60px;
+  height: 100%;
+  background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+  top: 0;
+  background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+  right: 0;
 }
 
 .content-header {
@@ -61,6 +67,7 @@ body {
 .responsive {
   flex-direction: column;
   @media screen and (min-width: map-get($breakpoints, 'laptop')) {
+    justify-content: space-around;
     flex-direction: row;
   }
 }

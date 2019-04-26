@@ -16,17 +16,17 @@ export default function Description() {
   return (
   <Context.Consumer>
     {({ images, destination }) => (
-      <div className="container">
-        <div className="gallery-images">
+      <div>
+        <div className="gallery-images container">
           {images.map((image, index) => (
             <div
-              style={{backgroundImage: `url(${image})`}}
-              key={index}
-              alt={`image number ${index} from ${destination.city}`}
-              onClick={() => changeImage(index)}/>
-          ))}
+            style={{backgroundImage: `url(${image})`}}
+            key={index}
+            alt={`image number ${index} from ${destination.city}`}
+            onClick={() => changeImage(index)}/>
+            ))}
         </div>
-        <div className="gallery-highlight" style={{backgroundImage: `url(${images[selectedIndex]})`}} alt={`image highlight from ${destination.city}`}>
+        <div className="container gallery-highlight" style={{backgroundImage: `url(${images[selectedIndex]})`}} alt={`image highlight from ${destination.city}`}>
             <div className="previous"onClick={() => changeImage(selectedIndex - 1, images.length)}/>
             <div className="next"onClick={() => changeImage(selectedIndex + 1, images.length)}/>
         </div>

@@ -1,258 +1,130 @@
 {
+  "pricesPerMonth": [
+    {"period": "2019-04-01", "value": 232},
+    {"period": "2019-05-01", "value": 257},
+    {"period": "2019-06-01", "value": 277},
+    {"period": "2019-07-01", "value": 274},
+    {"period": "2019-08-01", "value": 232},
+    {"period": "2019-09-01", "value": 213},
+    {"period": "2019-10-01", "value": 234},
+    {"period": "2019-11-01", "value": 232},
+    {"period": "2019-12-01", "value": 257},
+    {"period": "2020-01-01", "value": 277},
+    {"period": "2020-02-01", "value": 274},
+    {"period": "2020-03-01", "value": 232},
+    {"period": "2020-04-01", "value": 213},
+    {"period": "2020-05-01", "value": 234},
+    {"period": "2020-06-01", "value": 232},
+    {"period": "2020-07-01", "value": 257},
+    {"period": "2020-08-01", "value": 277},
+    {"period": "2020-09-01", "value": 274},
+    {"period": "2020-10-01", "value": 232},
+    {"period": "2020-11-01", "value": 213},
+    {"period": "2020-12-01", "value": 234},
+    {"period": "2021-01-01", "value": 277},
+    {"period": "2021-02-01", "value": 274},
+    {"period": "2021-03-01", "value": 232},
+    {"period": "2021-04-01", "value": 213},
+    {"period": "2021-05-01", "value": 234},
+    {"period": "2021-06-01", "value": 232},
+    {"period": "2021-07-01", "value": 257},
+    {"period": "2021-08-01", "value": 277},
+    {"period": "2021-09-01", "value": 274},
+    {"period": "2021-10-01", "value": 232},
+    {"period": "2021-11-01", "value": 213},
+    {"period": "2021-12-01", "value": 234}
+  ],
   "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.",
-  "event": "Carnival",
   "heroImage": "static/hero.jpg",
-  "hotel": {
-    "benefits": ["", "", ""],
-    "check": {
-      "in": "00:00",
-      "out": "00:00"
+  "images": [
+    "http://bit.do/eQs6K",
+    "http://bit.do/eQs6Z",
+    "http://bit.do/eQs7j",
+    "http://bit.do/eQtbR",
+    "http://bit.do/eQs6K",
+    "http://bit.do/eQs6Z",
+    "http://bit.do/eQs7j",
+    "http://bit.do/eQtbR",
+    "http://bit.do/eQs6K",
+    "http://bit.do/eQs6Z",
+    "http://bit.do/eQs7j",
+    "http://bit.do/eQtbR"
+  ],
+  "offers": [
+    {
+      "type": "hotel",
+      "description": "3 nights in a 4 stars hotel",
+      "price": 320, 
+      "currency": "$"
     },
-    "location": {
-      "geo": {
-        "lat": -27.588205,
-        "lon": -48.5537435
-      },
-      "city": "Florianópolis",
-      "country": "Brazil",
-      "address": "John Doe St., 153"
+    {
+      "type": "flight",
+      "description": "2h flight, no scales",
+      "price": 200, 
+      "currency": "$"
     },
-    "name": "Windsor Hotel",
-    "offer": {
-      "price": 232, 
-      "currency": 232,
-      "nights": 3
+    {
+      "type": "bundle",
+      "description": "3 nights, no scales",
+      "price": 520, 
+      "currency": "$"
+    }
+  ],
+  "origin": {
+    "geo": {
+      "lat": -27.588205,
+      "lon": -48.5537435
     },
-    "policies": [{
-      "description": "",
-      "type": ""
-    }],
-    "stars": 0,
-    "rating": 0
+    "city": "Berlin",
+    "country": "Germany"
   },
-  "flight": {
-    "heroOffer": {
-      "type": "fastest",
-      "arrival": "2019-04-25T17:50:00",
-      "departure": "2019-04-25T16:30:00",
-      "price": 233, 
-      "currency": "$",
-      "timeSpan": "02:00"
+  "destination": {
+    "geo": {
+      "lat": -27.588205,
+      "lon": -48.5537435
     },
-    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.",
-    "event": "Carnival",
-    "heroImage": "static/hero.jpg",
-    "images": [
-      "http://bit.do/eQs6K",
-      "http://bit.do/eQs6Z",
-      "http://bit.do/eQs7j",
-      "http://bit.do/eQtbR",
-      "http://bit.do/eQs6K",
-      "http://bit.do/eQs6Z",
-      "http://bit.do/eQs7j",
-      "http://bit.do/eQtbR",
-      "http://bit.do/eQs6K",
-      "http://bit.do/eQs6Z",
-      "http://bit.do/eQs7j",
-      "http://bit.do/eQtbR"
-    ],
-    "offers": [
-      {
-        "type": "fastest",
-        "arrival": "2019-04-25T17:50:00",
-        "departure": "2019-04-25T16:30:00",
-        "price": 233, 
-        "currency": "$",
-        "timeSpan": "02:00"
-      },
-      {
-        "type": "cheapest",
-        "arrival": "2019-04-25T17:50:00",
-        "departure": "2019-04-25T16:30:00",
-        "price": 233, 
-        "currency": "$",
-        "timeSpan": "02:00"
-      },
-      {
-        "type": "best",
-        "arrival": "2019-04-25T17:50:00",
-        "departure": "2019-04-25T16:30:00",
-        "price": 233, 
-        "currency": "$",
-        "timeSpan": "02:00"
-      }
-    ],
-    "origin": {
-      "geo": {
-        "lat": -27.588205,
-        "lon": -48.5537435
-      },
-      "city": "Berlin",
-      "country": "Germany"
-    },
-    "destination": {
-      "geo": {
-        "lat": -27.588205,
-        "lon": -48.5537435
-      },
-      "city": "Florianópolis",
-      "country": "Brazil"
-    },
-    "nearDates": [
-      {
-        "dates": ["2019-04-25", "2019-04-28"],
-        "price": 233, 
-        "currency": "$",
-        "timeSpan": "02:00"
-      },
-      {
-        "dates": ["2019-04-25", "2019-04-28"],
-        "price": 232, 
-        "currency": "$",
-        "timeSpan": "02:00"
-      },
-      {
-        "dates": ["2019-04-25", "2019-04-28"],
-        "price": 231, 
-        "currency": "$",
-        "timeSpan": "02:00"
-      },
-      {
-        "dates": ["2019-04-25", "2019-04-28"],
-        "price": 233, 
-        "currency": "$",
-        "timeSpan": "02:00"
-      },
-      {
-        "dates": ["2019-04-25", "2019-04-28"],
-        "price": 232, 
-        "currency": "$",
-        "timeSpan": "02:00"
-      },
-      {
-        "dates": ["2019-04-25", "2019-04-28"],
-        "price": 232, 
-        "currency": "$",
-        "timeSpan": "02:00"
-      },
-      {
-        "dates": ["2019-04-25", "2019-04-28"],
-        "price": 231, 
-        "currency": "$",
-        "timeSpan": "02:00"
-      },
-      {
-        "dates": ["2019-04-25", "2019-04-28"],
-        "price": 233, 
-        "currency": "$",
-        "timeSpan": "02:00"
-      },
-      {
-        "dates": ["2019-04-25", "2019-04-28"],
-        "price": 232, 
-        "currency": "$",
-        "timeSpan": "02:00"
-      },
-      {
-        "dates": ["2019-04-25", "2019-04-28"],
-        "price": 231, 
-        "currency": "$",
-        "timeSpan": "02:00"
-      }
-    ],
-    "subtitle": "",
-    "tags": [
-      "Florianópolis",
-      "Berlin",
-      "flight",
-      "summer",
-      "carnival",
-      "beach",
-      "Florianópolis",
-      "Berlin",
-      "flight",
-      "summer",
-      "carnival",
-      "beach",
-      "Florianópolis",
-      "Berlin",
-      "flight",
-      "summer",
-      "carnival",
-      "beach"
-    ],
-    "suggestions": [
-      {
-        "title": "Five days in Foz",
-        "image": "http://bit.do/eQuJu",
-        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
-      },
-      {
-        "title": "Five days in Foz",
-        "image": "http://bit.do/eQuJu",
-        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
-      },
-      {
-        "title": "Five days in Foz",
-        "image": "http://bit.do/eQuJu",
-        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
-      },
-      {
-        "title": "Five days in Foz",
-        "image": "http://bit.do/eQuJu",
-        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
-      },
-      {
-        "title": "Five days in Foz",
-        "image": "http://bit.do/eQuJu",
-        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
-      },
-      {
-        "title": "Five days in Foz",
-        "image": "http://bit.do/eQuJu",
-        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
-      }
-    ],
-    "toDo": [
-      {
-        "title": "Praia do Matadeiro",
-        "image": "http://bit.do/eQA24",
-        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
-      },
-      {
-        "title": "Praia do Matadeiro",
-        "image": "http://bit.do/eQA24",
-        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
-      },
-      {
-        "title": "Praia do Matadeiro",
-        "image": "http://bit.do/eQA24",
-        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
-      },
-      {
-        "title": "Praia do Matadeiro",
-        "image": "http://bit.do/eQA24",
-        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
-      },
-      {
-        "title": "Praia do Matadeiro",
-        "image": "http://bit.do/eQA24",
-        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
-      },
-      {
-        "title": "Praia do Matadeiro",
-        "image": "http://bit.do/eQA24",
-        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
-      }
-    ],
-    "title": "Paradise in Florianópolis"
-  },  
-  "images": ["", "", ""],
-  "subtitle": "",
+    "city": "Florianópolis",
+    "country": "Brazil"
+  },
+  "tags": [
+    "Summer",
+    "Florianópolis",
+    "Berlin",
+    "flight",
+    "carnival",
+    "beach",
+    "Florianópolis",
+    "Berlin",
+    "flight",
+    "summer",
+    "carnival",
+    "beach",
+    "Florianópolis",
+    "Berlin",
+    "flight",
+    "summer",
+    "carnival",
+    "beach"
+  ],
   "suggestions": [
     {
       "title": "Five days in Foz",
+      "image": "http://bit.do/eQs7j",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
+    },
+    {
+      "title": "Five days in Foz",
+      "image": "http://bit.do/eQtbR",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
+    },
+    {
+      "title": "Five days in Foz",
       "image": "http://bit.do/eQuJu",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
+    },
+    {
+      "title": "Five days in Foz",
+      "image": "http://bit.do/eQs6K",
       "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
     },
     {
@@ -273,6 +145,21 @@
     {
       "title": "Five days in Foz",
       "image": "http://bit.do/eQuJu",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
+    },
+    {
+      "title": "Five days in Foz",
+      "image": "http://bit.do/eQtbR",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
+    },
+    {
+      "title": "Five days in Foz",
+      "image": "http://bit.do/eQuJu",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
+    },
+    {
+      "title": "Five days in Foz",
+      "image": "http://bit.do/eQs7j",
       "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
     },
     {
@@ -281,6 +168,120 @@
       "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
     }
   ],
-  "tags": ["Florianópolis", "Berlin", "flight", "summer", "carnival", "beach"],
-  "title": "Paradise in Florianópolis"
+  "toDo": [
+    {
+      "title": "Praia do Matadeiro",
+      "image": "http://bit.do/eQtbR",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
+    },
+    {
+      "title": "Praia do Matadeiro",
+      "image": "http://bit.do/eQs6K",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
+    },
+    {
+      "title": "Praia do Matadeiro",
+      "image": "http://bit.do/eQs7j",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
+    },
+    {
+      "title": "Praia do Matadeiro",
+      "image": "http://bit.do/eQA24",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
+    },
+    {
+      "title": "Praia do Matadeiro",
+      "image": "http://bit.do/eQA24",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
+    },
+    {
+      "title": "Praia do Matadeiro",
+      "image": "http://bit.do/eQtbR",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
+    },
+    {
+      "title": "Praia do Matadeiro",
+      "image": "http://bit.do/eQA24",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
+    },
+    {
+      "title": "Praia do Matadeiro",
+      "image": "http://bit.do/eQA24",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
+    },
+    {
+      "title": "Praia do Matadeiro",
+      "image": "http://bit.do/eQA24",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
+    },
+    {
+      "title": "Praia do Matadeiro",
+      "image": "http://bit.do/eQs6K",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud"
+    }
+  ],
+  "flights": [
+    {
+      "description": "2h flight, no scales",
+      "price": 200,
+      "currency": "$"
+    },
+    {
+      "description": "2h flight, no scales",
+      "price": 200,
+      "currency": "$"
+    },
+    {
+      "description": "2h flight, no scales",
+      "price": 200,
+      "currency": "$"
+    },
+    {
+      "description": "2h flight, no scales",
+      "price": 200,
+      "currency": "$"
+    },
+    {
+      "description": "2h flight, no scales",
+      "price": 200,
+      "currency": "$"
+    },
+    {
+      "description": "2h flight, no scales",
+      "price": 200,
+      "currency": "$"
+    }
+  ],
+  "hotels": [
+    {
+      "description": "3 nights in a 4 stars hotel",
+      "price": 320, 
+      "currency": "$"
+    },
+    {
+      "description": "3 nights in a 4 stars hotel",
+      "price": 320, 
+      "currency": "$"
+    },
+    {
+      "description": "3 nights in a 4 stars hotel",
+      "price": 320, 
+      "currency": "$"
+    },
+    {
+      "description": "3 nights in a 4 stars hotel",
+      "price": 320, 
+      "currency": "$"
+    },
+    {
+      "description": "3 nights in a 4 stars hotel",
+      "price": 320, 
+      "currency": "$"
+    },
+    {
+      "description": "3 nights in a 4 stars hotel",
+      "price": 320, 
+      "currency": "$"
+    }
+  ]
 }

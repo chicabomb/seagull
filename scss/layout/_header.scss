@@ -12,22 +12,26 @@
   }
 }
 
-.header-offer {
-  @extend .flex;
-  background-color: white;
-  border-radius: 100px;
-  margin: $size_space $size_space auto auto;
-  padding: 0 $size_space 0 $size_space * 2;
-  cursor: pointer;
-  z-index: 2;
-  align-items: center;
-  span {
-    font-size: $size_font_big;
-  }
-  img {
-    margin: $size_space/2;
-    height: $size_image-icon-big;
-    width: $size_image-icon-big;
+.header-offers {
+  div {
+    @extend .flex;
+    background-color: white;
+    border-radius: 100px;
+    margin: $size_space $size_space;
+    padding: 0 $size_space 0 $size_space * 2;
+    cursor: pointer;
+    z-index: 2;
+    align-items: center;
+    font-size: $size_font_small;
+    span {
+      font-size: $size_font;
+    }
+    i {
+      margin: $size_space/2 $size_space/2 0;
+      height: $size_image-icon-big;
+      width: $size_image-icon-big;
+      color: $color__pacific;
+    }
   }
 }
 

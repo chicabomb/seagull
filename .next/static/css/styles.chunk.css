@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Material+Icons+Outlined|Cabin:400,600);
 @keyframes spin {
   from {
     transform: rotate(0deg); }
@@ -11,6 +12,9 @@ h1 {
 h2 {
   font-size: 16px;
   letter-spacing: 1px; }
+
+html {
+  box-sizing: border-box; }
 
 .clearfix::after {
   clear: both;
@@ -28,27 +32,42 @@ body {
   color: black;
   letter-spacing: 1px; }
 
-.container, .horizontal-scroll, .tags, .gallery-images, .suggestions, .content-header, .header {
+.container, .content-header, .header {
   width: 100%;
   margin: auto;
-  max-width: 1000px; }
+  max-width: 1000px;
+  position: relative; }
 
-.flex, .column, .offer-list, .suggestions div, .horizontal-scroll, .tags, .gallery-images, .suggestions, footer, .header, .header-offer, .offer-list > div {
+.flex, .column, footer, .cards div, .offer-list, .horizontal-scroll, .cards, .gallery-images, .price-per-month, .tags, footer div, .header, .header-offers div, .offer-list > div, .small-offers .column div > div, .small-offers footer div > div, .small-offers .cards div div > div, .cards .small-offers div div > div, .small-offers .offer-list div > div {
   display: flex;
   justify-content: space-between; }
 
-.column, .offer-list, .suggestions div {
+.column, footer, .cards div, .offer-list {
   flex-direction: column; }
 
 .content {
   background-color: white; }
 
-.horizontal-scroll, .tags, .gallery-images, .suggestions {
+.horizontal-scroll, .cards, .gallery-images, .price-per-month, .tags {
   flex-wrap: nowrap;
-  overflow-x: auto;
-  position: relative; }
-  .horizontal-scroll div, .tags div, .gallery-images div, .suggestions div {
+  overflow-x: auto; }
+  .horizontal-scroll div, .cards div, .gallery-images div, .price-per-month div, .tags div {
     flex: 0 0 auto; }
+
+.scroll-area {
+  position: relative; }
+  @media screen and (min-width: 768px) {
+    .scroll-area > :first-child {
+      padding-left: calc(50% - 500px); } }
+
+.fade-right {
+  position: absolute;
+  width: 60px;
+  height: 100%;
+  background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+  top: 0;
+  background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+  right: 0; }
 
 .content-header {
   margin: 50vh auto -20px;
@@ -63,12 +82,30 @@ body {
   flex-direction: column; }
   @media screen and (min-width: 1024px) {
     .responsive {
+      justify-content: space-around;
       flex-direction: row; } }
 
-footer p {
-  color: #B8B8B8;
-  margin: 10px auto;
-  font-size: 10px; }
+footer {
+  padding: 20px 0;
+  background-color: #f2f2f2; }
+  footer div {
+    justify-content: center; }
+    footer div * {
+      margin: 0 10px;
+      color: #B8B8B8;
+      text-decoration: none;
+      opacity: .6;
+      transition: all 0.3s ease-in-out;
+      padding: 5px 20px; }
+      footer div *:hover {
+        opacity: 1;
+        background: white;
+        border-radius: 30px; }
+  footer p {
+    color: #B8B8B8;
+    margin: 10px auto;
+    font-size: 10px;
+    padding: 20px 0; }
 
 .header {
   height: 60px;
@@ -80,20 +117,22 @@ footer p {
     margin: 10px 20px;
     height: 40px; }
 
-.header-offer {
+.header-offers div {
   background-color: white;
   border-radius: 100px;
-  margin: 10px 10px auto auto;
+  margin: 10px 10px;
   padding: 0 10px 0 20px;
   cursor: pointer;
   z-index: 2;
-  align-items: center; }
-  .header-offer span {
-    font-size: 22px; }
-  .header-offer img {
-    margin: 5px;
+  align-items: center;
+  font-size: 10px; }
+  .header-offers div span {
+    font-size: 14px; }
+  .header-offers div i {
+    margin: 5px 5px 0;
     height: 30px;
-    width: 30px; }
+    width: 30px;
+    color: #219BC6; }
 
 .hero-area {
   z-index: -1;
@@ -106,8 +145,42 @@ footer p {
   background-size: cover;
   display: flex;
   justify-content: flex-end; }
-  .hero-area .container, .hero-area .horizontal-scroll, .hero-area .tags, .hero-area .gallery-images, .hero-area .suggestions, .hero-area .content-header, .hero-area .header {
+  .hero-area .container, .hero-area .content-header, .hero-area .header {
     height: 100%; }
+
+.cards {
+  font-family: "Cabin", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+  letter-spacing: 1px;
+  margin-bottom: 40px; }
+  .cards div {
+    justify-content: flex-end;
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    margin-left: 0;
+    border-radius: 5px 5px 8px 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; }
+    .cards div:hover {
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05); }
+    .cards div h3 {
+      margin: 0 10px;
+      text-shadow: 0 0 10px black;
+      letter-spacing: 1px; }
+    .cards div p {
+      font-size: 10px;
+      color: #B8B8B8;
+      background-color: white;
+      margin: 10px 0 0;
+      padding: 10px 5px;
+      border-radius: 0 0 5px 2px; }
 
 .description {
   margin: 0 40px 0;
@@ -125,32 +198,6 @@ footer p {
       width: 20px; }
   .description h3 {
     margin: 40px 40px 60px; }
-
-.marker {
-  height: 12px;
-  width: 12px;
-  border: 8px solid #F9BF38;
-  border-radius: 100%; }
-
-.map {
-  width: 100%; }
-  .map > div {
-    margin: auto; }
-  @media screen and (min-width: 1024px) {
-    .map {
-      width: 50%; }
-      .map > div {
-        margin-left: 0; } }
-
-.tags div {
-  padding: 20px 0;
-  background-color: #219BC6;
-  padding: 10px 20px;
-  color: white;
-  border-radius: 20px;
-  letter-spacing: 1px;
-  font-size: 10px;
-  margin: 20px 10px 20px 0; }
 
 .gallery-images div {
   height: 100px;
@@ -193,97 +240,138 @@ footer p {
       margin: 10px 0 10px 5px;
       transform: rotate(-135deg); }
 
+.marker {
+  height: 12px;
+  width: 12px;
+  border: 8px solid #219BC6;
+  border-radius: 100%; }
+
+.map {
+  width: 100%; }
+  .map > div {
+    margin: auto; }
+  @media screen and (min-width: 1024px) {
+    .map {
+      width: 50%; }
+      .map > div {
+        margin-left: 0; } }
+
 .offer-list {
-  height: 500px;
+  max-height: 500px;
+  width: 100%;
   max-width: 500px;
   flex-wrap: wrap;
   align-items: baseline;
-  margin: 40px auto;
-  justify-content: start; }
-  .offer-list h3 {
-    margin: 0; }
-  @media screen and (min-width: 1024px) {
-    .offer-list {
-      margin: 0 0 0 20px; } }
+  justify-content: unset; }
   .offer-list > div {
     flex-wrap: wrap;
     margin: 10px 0 30px;
     align-items: baseline;
     justify-content: space-between;
     width: 100%; }
-
-.offer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: capitalize;
-  cursor: pointer;
-  width: 90px;
-  transition: all 0.3s ease-in-out;
-  padding: 5px; }
-  .offer:hover {
-    background-color: #f2f2f2; }
-  .offer p {
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap; }
-  .offer span {
+  .offer-list span {
     color: #219BC6;
     font-size: 22px; }
-  .offer img {
+  .offer-list img {
     height: 30px;
     width: 30px;
-    margin: auto 0 0; }
-  @media screen and (min-width: 1024px) {
-    .offer {
-      margin: 5px; } }
+    margin: auto 0 -7px; }
 
-.dates .offer {
-  flex-direction: column;
-  align-items: flex-end;
-  width: 135px; }
-  @media screen and (min-width: 1024px) {
-    .dates .offer {
-      margin: 5px; } }
-  .dates .offer .date {
-    color: #888;
-    font-size: 9px;
-    position: relative; }
-    .dates .offer .date + .date {
-      margin-left: 5px; }
-      .dates .offer .date + .date:before {
-        content: '\2212';
-        position: absolute;
-        left: -8px; }
-  .dates .offer span {
-    font-size: 14px;
-    margin-right: 5px; }
-  .dates .offer img {
-    height: 12px;
-    width: 12px; }
+.offer {
+  padding: 10px;
+  position: relative;
+  transition: all 0.3s ease-in-out; }
+  .offer + .offer {
+    margin-left: 20px; }
+  .offer:hover {
+    background-color: #f2f2f2;
+    border-radius: 4px; }
+  .offer i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #219BC6; }
 
-.suggestions {
-  margin-bottom: 40px; }
-  .suggestions div {
-    justify-content: flex-end;
-    height: 200px;
-    width: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 10px;
-    margin-left: 0;
-    border-radius: 10px;
-    color: white; }
-    .suggestions div h3 {
-      margin: 0 10px;
-      text-shadow: 0 0 10px black; }
-    .suggestions div p {
-      font-size: 10px;
+.small-offers {
+  text-align: left; }
+  .small-offers > div {
+    margin-bottom: 20px; }
+
+.small-offers h4,
+.offer-list h4 {
+  margin: 0;
+  text-transform: capitalize; }
+
+.small-offers p,
+.offer-list p {
+  color: #B8B8B8;
+  font-size: 10px;
+  margin: 0; }
+
+.offers {
+  justify-content: space-evenly; }
+  .offers div {
+    cursor: pointer; }
+    .offers div + div {
+      margin-top: 10px; }
+
+.small-offers .column div > div, .small-offers footer div > div, .small-offers .cards div div > div, .cards .small-offers div div > div, .small-offers .offer-list div > div {
+  align-items: center; }
+  .small-offers .column div > div i, .small-offers footer div > div i, .small-offers .cards div div > div i, .cards .small-offers div div > div i, .small-offers .offer-list div > div i {
+    margin: 0 20px 0 auto;
+    color: #219BC6; }
+
+.price-per-month {
+  justify-content: end;
+  margin: 40px auto 20px;
+  padding: 30px 0; }
+  .price-per-month .price {
+    width: 40px;
+    background-color: #219BC6;
+    margin: auto 10px 0;
+    position: relative;
+    opacity: .7;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer; }
+    .price-per-month .price .period,
+    .price-per-month .price .value {
+      position: absolute;
+      bottom: -30px;
+      font-size: 8px;
       color: #B8B8B8;
-      background-color: white;
-      margin: 10px 0 0;
-      padding: 10px 5px 0; }
+      text-align: center;
+      left: 50%;
+      transform: translate(-50%); }
+    .price-per-month .price .value {
+      top: -15px;
+      color: #333;
+      font-size: 10px;
+      font-weight: 600; }
+    .price-per-month .price:hover {
+      opacity: 1; }
+
+.price-axis {
+  height: 1px;
+  width: 100%;
+  background-color: #d9d9d9;
+  border: none;
+  margin: -40px 0 40px; }
+
+.tags div {
+  padding: 20px 0;
+  padding: 10px 20px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  font-size: 10px;
+  margin: 20px 10px 20px 0;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  color: black; }
+  .tags div:hover {
+    background-color: #219BC6;
+    color: white; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

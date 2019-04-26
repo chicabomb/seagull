@@ -1,5 +1,6 @@
 
-.suggestions {
+.cards {
+  @include font-default();
   @extend .horizontal-scroll;
   margin-bottom: $size_space*4;
   div {
@@ -12,18 +13,25 @@
     background-size: cover;
     margin: $size_space;
     margin-left: 0;
-    border-radius: 10px;
+    border-radius: 5px 5px 8px 8px;
     color: white;
+    cursor: pointer;
+    transition: $default-transition;
+    &:hover {
+      box-shadow: $shadow_default;
+    }
     h3 {
       margin: 0 $size_space;
       text-shadow: 0 0 10px black;
+      letter-spacing: 1px;
     }
     p {
       font-size: $size_font_small;
       color: $color__ashgray;
       background-color: white;
       margin: $size_space 0 0;
-      padding: $size_space $size_space/2 0; 
+      padding: $size_space $size_space/2;
+      border-radius: 0 0 5px 2px;
     }
   }
 }

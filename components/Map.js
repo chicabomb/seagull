@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Marker, StaticMap } from 'react-map-gl';
+import ReactMapGL, { Marker } from 'react-map-gl';
+import 'now-env';
 
-export default function Description({location}) {
+export default function Map({location}) {
   const [viewport, setViewport] = useState({
     zoom: 4,
     bearing: 0,
@@ -17,6 +18,8 @@ export default function Description({location}) {
       const length = window.innerWidth <= 768 ? window.innerWidth - 100 : 500
       setViewport({
         ...viewport,
+        latitude: +location.lat,
+        longitude: +location.lon,
         height: length,
         width: length
       })
@@ -24,16 +27,13 @@ export default function Description({location}) {
     resize();
     window.addEventListener('resize', resize);
     return () => window.removeEventListener('resize', resize);
-  })
+  }, [])
 
   return (
-    <StaticMap
+    <ReactMapGL
       ref={mapRef}
-      mapStyle={process.env.REACT_APP_MAPBOX_STYLE}
-      mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_KEY}
+      mapboxApiAccessToken={process.env.MAPBOX_KEY}
       {...viewport}
-      latitude={+location.lat}
-      longitude={+location.lon}
       onViewportChange={(viewport) => setViewport(viewport)}
     >
       <Marker
@@ -43,6 +43,6 @@ export default function Description({location}) {
         offsetTop={-12}>
         <div className="marker" />
       </Marker>
-    </StaticMap>
+    </ReactMapGL>
   )
 }

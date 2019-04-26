@@ -1,8 +1,28 @@
 footer {
-  @extend .flex;
+  @extend .column;
+  padding: $size_space*2 0;
+  background-color: $color__background;
+  div {
+    @extend .flex;
+    justify-content: center;
+    & * {
+      margin: 0 $size_space;
+      color: $color__ashgray;
+      text-decoration: none;
+      opacity: .6;
+      transition: $default-transition;
+      padding: $size_space/2 $size_space*2;
+      &:hover {
+        opacity: 1;
+        background: white;
+        border-radius: 30px;
+      }
+    }
+  }
   p {
     color: $color__ashgray;
     margin: $size_space auto;
     font-size: $size_font_small;
+    padding: $size_space*2 0;
   }
 }
